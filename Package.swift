@@ -69,7 +69,7 @@ let package = Package(
                 .headerSearchPath("src"),
                 .headerSearchPath("include"),
                 // TODO: Find a "safe" way to disable ARC in GLFW's Cocoa backend
-                .unsafeFlags(["-fno-objc-arc"], .when(platforms: [.macOS])),
+                //.unsafeFlags(["-fno-objc-arc"], .when(platforms: [.macOS])),
                 .define("_GLFW_COCOA", .when(platforms: [.macOS])),
                 .define("GLFW_EXPOSE_NATIVE_COCOA", .when(platforms: [.macOS])),
                 .define("GLFW_EXPOSE_NATIVE_NSGL", .when(platforms: [.macOS])),
