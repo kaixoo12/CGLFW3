@@ -1,18 +1,20 @@
 # CGLFW3
 
-Builds [GLFW](https://www.glfw.org) as a library to add to your Swift Package. As of writing, it's currently updated to the [latest commit](https://github.com/glfw/glfw/commit/955fbd9d265fa95adf9cb94896eb9a516aa50420) for GLFW 3.4.
+Builds [GLFW](https://www.glfw.org) as a library to add to your Swift Package.
 
-This package can work on its own, but it was created as a base for [SwiftGLFW](https://github.com/thepotatoking55/SwiftGLFW).
+This package can work on its own, but it was created as a base for [SwiftGLFW](https://github.com/kaixoo12/SwiftGLFW).
 
 ## Getting Started
 
-SwiftPM doesn't support unsafe flags with semantic versioned packages, so add this to your dependecies in `Package.swift`:
-
 ```swift
-.package(url: "https://github.com/thepotatoking55/CGLFW3.git", branch: "main")
+.package(url: "https://github.com/kaixoo12/CGLFW3.git", .from: "3.4.1")
 ```
 
-From there, you can just import it with `import CGLFW3` and use it like normal.
+## 🚀 Beware!!!
+
+> The current build is outdated, I'm only maintaining this because [thepotatoking55](https://github.com/thepotatoking55), the original SwiftGLFW author, stopped maintaining the package.
+
+The original CGLFW, in MacOS, set a flag that disabled Automatic Reference Counting on Skia. The use of `.unsafeFlags` is prohibited to packages in modern Swift, so we can't use this function. In MacOS, this might or might not affect the behaviour of the package - I'm a linux user, so if you wanna test the package from Mac, that would be good!!
 
 ## Cross-Platform Support
 
