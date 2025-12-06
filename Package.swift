@@ -79,7 +79,7 @@ let targets: [Target] = [
             .linkedFramework("IOKit", .when(platforms: [.macOS])),
             .linkedFramework("CoreFoundation", .when(platforms: [.macOS])),
             .linkedFramework("QuartzCore", .when(platforms: [.macOS])),
-            .linkedLibrary("m", .when(platforms: [.linux])
+            .linkedLibrary("m", .when(platforms: [.linux]))
         ]
     ),
     .target(
