@@ -49,7 +49,7 @@ sources += [
 ]
 #endif
 
-targets: [Target] = [
+let targets: [Target] = [
     .target(
         name: "glfw3",
         exclude: [
