@@ -58,7 +58,9 @@ let targets: [Target] = [
             "CMakeLists.txt", "LICENSE.md", "README.md",
             "src/CMakeLists.txt"
         ],
-        sources: sources.map("src/".appending) + ["include"],
+        // Append "src/" to the start of every file in sources
+        // And add an element "include" to the array
+        sources: sources.map { "src/\$(0)" } + ["include"],
         publicHeadersPath: "include",
         cSettings: [
             .headerSearchPath("src"),
