@@ -60,7 +60,7 @@ let targets: [Target] = [
         ],
         // Append "src/" to the start of every file in sources
         // And add an element "include" to the array
-        sources: sources.map { "src/\$(0)" } + ["include"],
+        sources: sources.map { "src/\($0)" } + ["include"],
         publicHeadersPath: "include",
         cSettings: [
             .headerSearchPath("src"),
